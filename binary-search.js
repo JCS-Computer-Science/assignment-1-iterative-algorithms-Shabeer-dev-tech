@@ -7,8 +7,9 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
-
-	return null;
+	array[parseInt((array.length - 1)/2)]
+	let index = array.indexOf(searchTerm)
+	return index;
 }
 
 module.exports = binarySearch;
