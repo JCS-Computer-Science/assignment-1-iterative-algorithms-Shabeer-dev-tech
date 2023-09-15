@@ -8,7 +8,10 @@ function bubbleSort(array) {
     ** Repeat the above process until you get through an entire
     ** cycle without needing any swaps
     */
-
+for (let i = 0; i < array.length; i++) {
+    if(array)
+    
+}
 	return array;
 }
 
