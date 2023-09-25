@@ -7,12 +7,13 @@ function selectionSort(array) {
 	 ** Continue like this until you have only one element left.
 	 */
 let tempArray = array.slice(0)
-for (let i = 0; i < array.length; i++) {
+const number = array.length
+for (let i = 0; i < number; i++) {
 	let min=findSmallestElement(tempArray)
 	let temp=array[i]
-	array[i]=min
 	array[linearSearch(array,min)]=temp
-	tempArray.splice(linearSearch(array,min),1)
+	array[i]=min
+	tempArray.splice(linearSearch(tempArray,min),1)
 }
 	return array;
 }
@@ -35,3 +36,4 @@ function linearSearch(array, searchTerm) {
 }
 
 module.exports = selectionSort;
+console.log(selectionSort([55,54,34,5,3,5,299]))

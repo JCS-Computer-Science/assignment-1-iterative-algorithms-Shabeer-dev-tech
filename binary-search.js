@@ -7,6 +7,26 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
-	array[parseInt((array.length - 1)/2)]
-	if(array)
+	 let start = 0;
+	 let end = array.length - 1;
+   
+	 while (start <= end) {
+	   const middle = Math.floor((start + end) / 2);
+
+	   if (array[middle] === searchTerm) {
+		 return middle;
+	   }
+   
+	   if (array[middle] > searchTerm) {
+		 end = middle - 1;
+	   }
+	   else {
+		 start = middle + 1;
+	   }
+	 }
+   
+	 return -1;
+ 
+	
 }
+module.exports = binarySearch;
